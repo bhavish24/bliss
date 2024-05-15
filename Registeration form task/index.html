@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='inndex.css'>
+</head>
+<body>
+    <div class="maincontainer">
+    <div class="container">
+    <h2 style="margin-left: 15px; text-align: center;">Registration Form</h2>
+        <p class="under"></p>
+    <div class="first"><b>First Name</b></b> <br><input type="text"  placeholder="&nbsp;Enter your name" class="name" id="name"><br>
+    <span id="aleart"></span><br></div>
+
+    <div class="unam"><b>User Name</b><br> <input type="text" placeholder="&nbsp;Enter your Username" id="user"class='uname'><br>
+    <span id="user1"></span><br></div>
+
+    <div class="email"><b>Email</b><br><input type="email" class="mail" placeholder="&nbsp;Enter your email" id="email"  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$;"><br>
+    <span id="email1"></span><br></div>
+
+    <div class="phone"><b>Phone Number</b><br> <input type="number" class="phonenumber" placeholder="&nbsp;Enter your phonenumber" id="phone" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;"><br>    
+    <span id="phone1"></span><br></div>
+
+    <div class="pass"><b>Password</b><br><input type="password" class="password" placeholder="&nbsp; Enter your password" id="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+    <span id="password1"></span><br></div>
+
+    <div class="con"><b>Confirm Password </b><input type="password" class="conform" placeholder="&nbsp;Enter your confirm password" id="confirm"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+    <span id="confirm1"></span><br></div>
+    
+    <div class="Gender" id="gen">
+        <span id="slecte"></span>
+    <b class="gen">Gender</b><br>
+    <br>
+    <input type="radio" class="male" id="male"name='JTP:checked'>Male
+    <input type="radio" class="female" id="female" name='JTP:checked' value="Female">Female
+    <input type="radio" class="Prefer" id="Prefer" name='JTP:checked' value="Prefer Not To Say">Prefer Not To Say
+    </div><br>
+
+     <div><button class="reg" onclick="f()">Register</button></div>
+    </div></div></div>
+    
+</body>
+<script>
+        function f(){
+            a=document.getElementById('name').value
+            if(a==''){
+                document.getElementById('aleart').innerHTML="<span style='color:red;font-size:15px;'>"+'Please Enter Your Name</span>';
+            }
+            else{
+                document.getElementById('aleart').innerHTML=''
+            }
+
+            b=document.getElementById('user').value
+            if(b==''){
+                document.getElementById('user1').innerHTML="<span style='color:red;font-size:15px;'>"+'Please Enter Your Name</span>';
+            }
+            else{
+                document.getElementById('user1').innerHTML=''
+            }
+
+            c=document.getElementById('email').value
+            if(c==''){
+                document.getElementById('email1').innerHTML="<span style='color:red;font-size:15px;'>"+'Please Enter Your Valid Email</span>';
+            }
+            else{
+                document.getElementById('email1').innerHTML=''
+            }   
+
+            d=document.getElementById('phone').value
+            if(d==''){
+                document.getElementById('phone1').innerHTML="<span style='color:red;font-size:15px;'>"+'Please Enter Your Valid PhoneNumber</span>';
+            }
+            else{
+                document.getElementById('phone1').innerHTML=''
+            }
+            
+            e=document.getElementById('password').value
+            if(e==''){
+                document.getElementById('password1').innerHTML="<span style='color:red;font-size:15px;'>"+'Please Enter Your Valid Password</span>';
+            }
+            else{
+                document.getElementById('password1').innerHTML=''
+            }
+            
+            f=document.getElementById('confirm').value
+            if(f==''){
+                document.getElementById('confirm1').innerHTML="<span style='color:red;font-size:15px;'>"+'Please Enter Your confirm Password</span>';
+            }
+            else{
+                document.getElementById('confirm1').innerHTML=''
+            }
+            
+            g=document.getElementById('gen').value
+            if(g==''){
+                document.getElementById('slecte').innerHTML="<span style='color:red;font-size:15px;'>"+'Please Slecte your Gender</span>';
+            }
+            else{
+                document.getElementById('slecte').innerHTML=''
+            }
+            h=(document.getElementById('male').checked==true).value
+            if(h==checked){
+                document.getElementById('male1').innerHTML="<span style='color:red;'>"+'Please Slecte your Gender</span>';
+            }
+            else{
+                document.getElementById('male1').innerHTML=checked
+            }
+
+
+        }
+    </script>
+</html>
